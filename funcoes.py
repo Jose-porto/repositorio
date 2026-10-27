@@ -12,3 +12,12 @@ def define_posicoes (linha,coluna, orientacao, tamanho):
             lista.append(mini_lista)
         
     return lista
+
+def preenche_frota (frota, nome, linha, coluna, orientacao, tamanho):
+    posicoes = define_posicoes(linha, coluna, orientacao, tamanho)
+    if nome in frota:
+        frota[nome].append(posicoes)
+    else:
+        frota[nome] = [posicoes]
+    return frota
+
